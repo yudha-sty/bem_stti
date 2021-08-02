@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+body,
+h1,
+h2,
+h3,
+h4,
+h4,
+h6,
+a,
+p,
+button,
+input,
+label,
+ul,
+li,
+ol,
+.message {
+    font-family: "Quicksand", sans-serif;
+}
+
+.line-clamp {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

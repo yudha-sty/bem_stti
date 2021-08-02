@@ -1,0 +1,383 @@
+@use '../abstracts' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+.home {
+    &-icon {
+        font-size: 4rem;
+        &-sm {
+            font-size: 1.5rem;
+        }
+        @include media-breakpoint-down("md") {
+            font-size: 3rem;
+        }
+        @include media-breakpoint-down("sm") {
+            font-size: 2.4rem;
+        }
+    }
+    &-title {
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            @include media-breakpoint-down("md") {
+                font-size: 1.5rem;
+            }
+
+            @include media-breakpoint-down("sm") {
+                font-size: 1rem;
+            }
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 0;
+            @include media-breakpoint-down("md") {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.home-empty {
+    padding: 4rem;
+    color: $ctm-grey;
+    border: 1px solid $ctm-grey;
+    border-radius: 8px;
+    background: rgba(white, 1);
+
+    .icon {
+        font-size: 10rem;
+    }
+
+    .message {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    @include media-breakpoint-down("md") {
+        padding: 2rem;
+        .icon {
+            font-size: 5rem;
+        }
+        .message {
+            font-size: 1.8rem;
+        }
+    }
+    @include media-breakpoint-down("sm") {
+        padding: 1rem;
+        .icon {
+            font-size: 4rem;
+        }
+        .message {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+// ================== SECTION LANDING ================== //
+
+#landing {
+    position: relative;
+}
+
+.landing {
+    min-height: 100vh;
+    padding-top: 10vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &-title {
+        margin-top: -7rem;
+        font-size: 100%;
+        font-weight: 700;
+    }
+    &-subtitle {
+        font-size: 100%;
+        font-weight: 600;
+    }
+
+    @include media-breakpoint-down("lg") {
+        min-height: 80vh;
+    }
+
+    @include media-breakpoint-down("md") {
+        min-height: 55vh;
+        &-quotes {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down("sm") {
+        min-height: 60vh;
+        padding: 10vh 5% 0;
+
+        &-title,
+        &-subtitle {
+            font-size: 80%;
+        }
+    }
+
+    @include media-breakpoint-down("xs") {
+        min-height: 50vh;
+        &-title {
+            margin-top: -1rem;
+            font-size: 70%;
+        }
+        &-subtitle {
+            font-size: 70%;
+        }
+    }
+}
+
+// ================== SECTION TIMELINE ================== //
+
+#home-timeline {
+    padding: 0 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-timeline {
+    padding: 4rem 0 10rem;
+
+    @include media-breakpoint-down("md") {
+        padding: 2rem 0;
+    }
+    &-grid {
+        display: grid;
+        gap: 1rem;
+        position: relative;
+
+        &-0 {
+            display: block;
+        }
+
+        &-1 {
+            grid-template-columns: 1fr;
+            grid-template-rows: 500px;
+
+            .home-timeline-item:nth-child(1) {
+                grid-row: 1;
+            }
+        }
+
+        &-2 {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 500px;
+        }
+
+        &-3 {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 250px);
+
+            .home-timeline-item:nth-child(1) {
+                grid-row: span 2;
+            }
+        }
+
+        @include media-breakpoint-down("md") {
+            grid-template-columns: 1fr;
+            grid-template-rows: 350px;
+        }
+    }
+    &-item {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        p {
+            margin: 0;
+        }
+        span {
+            font-size: 1.2rem;
+        }
+    }
+
+    &-item:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1/2;
+    }
+    &-item:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2/3;
+    }
+    &-text {
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        h3,
+        p {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &-background {
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+    }
+
+    @include media-breakpoint-down("md") {
+        &-item:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        &-item:nth-child(2) {
+            display: none;
+        }
+        &-item:nth-child(3) {
+            display: none;
+        }
+        .btn-custom {
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// ================== SECTION KABINET ================== //
+
+#home-kabinet {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-kabinet {
+    padding: 15rem 0;
+    min-height: 750px;
+
+    @include media-breakpoint-down("md") {
+        padding: 7rem 0;
+        text-align: center;
+        min-height: auto;
+    }
+
+    h1 {
+        letter-spacing: 0.4rem;
+        font-size: 100%;
+        font-weight: 600;
+        @include media-breakpoint-down("sm") {
+            font-size: 80%;
+        }
+
+        @include media-breakpoint-down("xs") {
+            font-size: 60%;
+        }
+    }
+    h2 {
+        font-size: 100%;
+        @include media-breakpoint-down("md") {
+            font-size: 140%;
+        }
+    }
+    .logo-desktop {
+        width: 600px;
+        position: absolute;
+        left: 60vw;
+        bottom: 0px;
+        @include media-breakpoint-down("md") {
+            display: none;
+        }
+    }
+
+    .logo-mobile {
+        display: none;
+
+        img {
+            width: 80%;
+        }
+
+        @include media-breakpoint-down("md") {
+            display: block;
+        }
+    }
+}
+
+// ================== SECTION DOCUMENTATION ================== //
+
+#home-documentation {
+    position: relative;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.home-documentation {
+    padding: 4rem 0;
+
+    @include media-breakpoint-down("md") {
+        padding: 2rem 0;
+    }
+
+    &-item {
+        position: relative;
+    }
+    &-image {
+        width: 100%;
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &-date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        letter-spacing: 1px;
+        color: white;
+        padding: 0.2rem 1rem;
+    }
+    &-text {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+// ================== SECTION QUOTES ================== //
+// MOBILE VIEW ONLY
+
+#home-quotes {
+    display: none;
+
+    .home-quotes {
+        min-height: 140px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+    }
+
+    .quotes-title {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .quotes-icon {
+        width: 60px;
+        position: absolute;
+        left: -30px;
+        bottom: 0;
+    }
+
+    @include media-breakpoint-down("md") {
+        display: block;
+    }
+}

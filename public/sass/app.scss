@@ -1,0 +1,12 @@
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Call folders
+@use './abstracts';
+@use './base';
+@use './components';
+@use './customs';
+@use './pages';
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

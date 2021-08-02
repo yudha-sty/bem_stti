@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+.kegiatan {
+    padding: 1rem 0;
+
+    &-item a {
+        cursor: pointer;
+    }
+
+    &-image {
+        width: 100%;
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-detail-image {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    &-date {
+        margin: 1rem 0 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    &-title {
+        color: $text-primary;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &-description {
+        color: $text-primary;
+    }
+}

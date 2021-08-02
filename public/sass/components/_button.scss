@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+.btn-custom {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 0.4rem 1.6rem !important;
+
+    @include media-breakpoint-down('md'){
+        display: block;
+        width: 100%;
+    }
+}

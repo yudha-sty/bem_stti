@@ -1,0 +1,46 @@
+@use '../abstracts/' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+.dokumentasi {
+    padding: 1rem 0;
+
+    &-item a {
+        cursor: pointer;
+    }
+
+    &-image {
+        width: 100%;
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-detail-image {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    &-date {
+        color: $text-primary;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &-detail-date {
+        font-weight: 400;
+    }
+
+    &-title {
+        color: $text-primary;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &-detail-title {
+        margin: 2rem 0 0.2rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}

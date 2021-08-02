@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+.registration{
+
+  h1{
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  h2{ 
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  &-form{
+    margin: auto;
+    max-width: 750px;
+  }
+
+  @include media-breakpoint-down("md") {
+    h1{
+      font-size: 2rem;
+    }
+    h2{
+      font-size: 1.8rem;
+    }
+  }
+
+  @include media-breakpoint-down("sm") {
+    h1{
+      font-size: 1.5rem;
+    }
+    h2{
+      font-size: 1.2rem;
+    }
+  }
+
+  @include media-breakpoint-down("xs") {
+    h1{
+      font-size: 1.2rem;
+    }
+    h2{
+      font-size: 1.2rem;
+    }
+  }
+}

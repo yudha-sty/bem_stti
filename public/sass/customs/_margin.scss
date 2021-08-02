@@ -1,0 +1,17 @@
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+// margin top login form
+.mt-login {
+    @include media-breakpoint-down("sm") {
+        margin-top: 100px;
+    }
+}
+
+// marign top bottom for small pages
+.margin-page {
+    margin-block: 5rem;
+
+    @include media-breakpoint-down("sm") {
+        margin-block: 0;
+    }
+}

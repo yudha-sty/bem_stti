@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+footer{
+  position: relative;
+  overflow: hidden;
+}
+
+.footer{
+  padding-top: 10rem;
+
+  iframe{
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+  }
+  hr{
+    border-top: 0.5px solid white;
+  }
+
+  &-logo{
+    width: 80px;
+    height: 80px;
+  }
+
+  @include media-breakpoint-down('lg') { 
+    padding-top: 6rem;
+  }
+  @include media-breakpoint-down('md') { 
+    padding-top: 4rem;
+  }
+  @include media-breakpoint-down('sm') {
+    padding-top: 2rem;
+    
+    h1{
+      font-size: 1.7rem;
+    }
+
+    &-logo{
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include media-breakpoint-down('xs') {
+    h1{
+      font-size: 1.5rem;
+    }
+  }
+}
+

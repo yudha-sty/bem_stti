@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss' as *;
+
+#heading{
+  padding-top: 50px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heading{
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: auto;
+  max-width: 700px;
+  min-height: 600px;
+  font-size: 4rem;
+
+  h1{
+    margin-top: -80px;
+    font-size: 100%;
+    font-weight: 800;
+  }
+
+  @include media-breakpoint-down('lg') { 
+    min-height: 600px;
+  }
+
+  @include media-breakpoint-down('md') { 
+      min-height: 500px;
+      h1{
+        font-size: 80%;
+        margin-top: 0;
+      }
+  }
+
+  @include media-breakpoint-down('sm') { 
+      min-height: 400px;
+      padding: 0 5%;
+      h1{
+        font-size: 70%;
+      }
+  }
+
+  @include media-breakpoint-down("xs") {
+    min-height: 300px;
+    h1{
+      font-size: 60%;
+    }
+}
+}

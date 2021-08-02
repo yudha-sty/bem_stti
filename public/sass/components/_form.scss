@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+label{
+  color: $form-label;
+  font-weight: 600;
+}
+
+input, select, textarea{
+  color: $ctm-black!important;
+  background: $form-bg!important;
+}
+
+::placeholder{
+  color: $form-label!important;
+}
+
+.form-control.is-invalid{
+  padding-right: 0.75rem!important;
+}
